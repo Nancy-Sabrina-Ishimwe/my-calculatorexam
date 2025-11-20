@@ -31,7 +31,7 @@ app.get("/calculations", (req, res) => {
     res.json(data.calculations);
 });
 
-// PUT: Update calculation
+
 app.put("/calculations/:id", (req, res) => {
     const id = Number(req.params.id);
     const { expression, result } = req.body;
@@ -46,6 +46,13 @@ app.put("/calculations/:id", (req, res) => {
     fs.writeFileSync("db.json", JSON.stringify(data, null, 2));
 
     res.json(calc);
+});
+
+
+app.delete("/calculations", (req, res) => {
+    data.calculations = [];
+    fs.writeFileSync("db.json", JSON.stringify(data, null, 2));
+    res.json({ message: "All calculations deleted" });
 });
 
 app.listen(3000, () => console.log("Server running on http://localhost:3000"));
