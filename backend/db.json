@@ -1,3 +1,25 @@
 {
-  "calculations": []
+  "calculations": [
+    {
+      "id": 1763632259819,
+      "expression": "1+1",
+      "result": 2,
+      "createdAt": "2025-11-20T09:50:59.819Z"
+    },
+    {
+      "id": 1763632261492,
+      "expression": "",
+      "createdAt": "2025-11-20T09:51:01.492Z"
+    },
+    {
+      "id": 1763632362203,
+      "expression": "",
+      "createdAt": "2025-11-20T09:52:42.203Z"
+    },
+    {
+      "id": 1763632363090,
+      "expression": "",
+      "createdAt": "2025-11-20T09:52:43.090Z"
+    }
+  ]
 }
