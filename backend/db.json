@@ -26,6 +26,12 @@
       "expression": "2+2",
       "result": 4,
       "createdAt": "2025-11-20T09:56:42.344Z"
+    },
+    {
+      "id": 1763632902760,
+      "expression": "5-3",
+      "result": 2,
+      "createdAt": "2025-11-20T10:01:42.760Z"
     }
   ]
 }
