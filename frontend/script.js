@@ -4,7 +4,7 @@ async function calculate() {
 
     document.getElementById("result").innerText = result;
 
-    // Save to API
+    
     await fetch("http://localhost:3000/calculations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -14,6 +14,7 @@ async function calculate() {
     loadCalculations();
 }
 
+// Function to load all calculations
 async function loadCalculations() {
     const res = await fetch("http://localhost:3000/calculations");
     const data = await res.json();
@@ -27,5 +28,26 @@ async function loadCalculations() {
         list.appendChild(li);
     });
 }
+
+
+const clearBtn = document.getElementById("clear");
+
+clearBtn.addEventListener("click", async () => {
+    try {
+        
+        await fetch("http://localhost:3000/calculations", {
+            method: "DELETE"
+        });
+
+        
+        document.getElementById("result").innerText = "";
+        document.getElementById("list").innerHTML = "";
+
+        alert("All calculations cleared!");
+    } catch (error) {
+        console.error("Error clearing calculations:", error);
+    }
+});
+
 
 loadCalculations();
